@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Astrotomic\Tmdb\Data;
 
+use Astrotomic\Tmdb\Images\Poster;
+
 readonly class Company
 {
     final public function __construct(
@@ -28,6 +30,14 @@ readonly class Company
             headquarters: $data['headquarters'] ?? null,
             homepage: $data['homepage'] ?? null,
             parentCompany: empty($data['parent_company']) ? null : self::fromArray($data['parent_company']),
+        );
+    }
+
+    public function poster(): Poster
+    {
+        return new Poster(
+            $this->logoPath,
+            $this->name
         );
     }
 }
