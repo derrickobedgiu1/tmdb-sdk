@@ -229,6 +229,7 @@ enum Job: string
     case Construction_Manager = 'Construction Manager';
     case Consulting_Accountant = 'Consulting Accountant';
     case Consulting_Producer = 'Consulting Producer';
+    case Consulting_Editor = 'Consulting Editor';
     case Contact_Lens_Designer = 'Contact Lens Designer';
     case Contact_Lens_Painter = 'Contact Lens Painter';
     case Contact_Lens_Technician = 'Contact Lens Technician';
