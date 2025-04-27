@@ -48,6 +48,7 @@ readonly class Movie
         public ?ExternalIds       $externalIds,
         public ?AlternativeTitle  $alternativeTitles,
         public ?array $credits,
+        public array $originCountries,
     ) {}
 
     public static function fromArray(array $data): self
@@ -89,6 +90,7 @@ readonly class Movie
             externalIds: empty($data['external_ids']) ? null : ExternalIds::fromArray($data['external_ids']),
             alternativeTitles: empty($data['alternative_titles']) ? null : AlternativeTitle::fromArray($data['alternative_titles']),
             credits: empty($credits) ? null : $credits,
+            originCountries: (array)($data['origin_country'] ?? []),
         );
     }
 
