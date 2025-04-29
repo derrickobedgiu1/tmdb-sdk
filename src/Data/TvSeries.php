@@ -11,6 +11,7 @@ use Astrotomic\Tmdb\Collections\LanguageCollection;
 use Astrotomic\Tmdb\Collections\NetworkCollection;
 use Astrotomic\Tmdb\Collections\PersonCreditCollection;
 use Astrotomic\Tmdb\Collections\TvSeasonCollection;
+use Astrotomic\Tmdb\Collections\VideoCollection;
 use Astrotomic\Tmdb\Enums\TvSeriesStatus;
 use Astrotomic\Tmdb\Enums\TvSeriesType;
 use Astrotomic\Tmdb\Images\Backdrop;
@@ -58,10 +59,21 @@ readonly class TvSeries
         public ?TvSeriesType $type,
         public float $voteAverage,
         public int $voteCount,
+        public ?VideoCollection   $videos,
+        public ?ExternalIds       $externalIds,
+        public ?AlternativeTitle  $alternativeTitles,
+        public ?array $credits
     ) {}
 
     public static function fromArray(array $data): self
     {
+        $credits = [];
+
+        if(isset($data['credits'])){
+            $credits['cast'] = empty($data['credits']['cast']) ? null : PersonCreditCollection::fromArray($data['credits']['cast']);
+            $credits['crew'] = empty($data['credits']['crew']) ? null : PersonCreditCollection::fromArray($data['credits']['crew']);
+        }
+
         return new static(
             adult: $data['adult'],
             backdropPath: $data['backdrop_path'],
@@ -95,6 +107,10 @@ readonly class TvSeries
             type: empty($data['type']) ? null : TvSeriesType::from($data['type']),
             voteAverage: $data['vote_average'],
             voteCount: $data['vote_count'],
+            videos: VideoCollection::fromArray($data['videos']['results'] ?? null),
+            externalIds: empty($data['external_ids']) ? null : ExternalIds::fromArray($data['external_ids']),
+            alternativeTitles: empty($data['alternative_titles']) ? null : AlternativeTitle::fromArray($data['alternative_titles']),
+            credits: empty($credits) ? null : $credits,
         );
     }
 
