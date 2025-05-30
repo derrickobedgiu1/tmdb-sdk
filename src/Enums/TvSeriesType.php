@@ -10,4 +10,5 @@ enum TvSeriesType: string
     case Talk_Show = 'Talk Show';
     case Reality = 'Reality';
     case Miniseries = 'Miniseries';
+    case Documentary = 'Documentary';
 }
