@@ -399,6 +399,7 @@ enum Job: string
     case Head_Of_Story = 'Head of Story';
     case Health_And_Safety = 'Health and Safety';
     case Helicopter_Camera = 'Helicopter Camera';
+    case Helping_Hand = 'Helping Hand';
     case Human_Resources = 'Human Resources';
     case IO_Supervisor = 'I/O Supervisor';
     case Idea = 'Idea';
