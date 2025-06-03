@@ -331,6 +331,7 @@ enum Job: string
     case Executive_In_Charge_Of_Production = 'Executive In Charge Of Production';
     case Executive_Music_Producer = 'Executive Music Producer';
     case Executive_Producer = 'Executive Producer';
+    case Executive_Co_Producer = 'Executive Co-Producer';
     case Executive_Producers_Assistant = 'Executive Producer\'s Assistant';
     case Executive_Visual_Effects_Producer = 'Executive Visual Effects Producer';
     case Extras_Casting = 'Extras Casting';
