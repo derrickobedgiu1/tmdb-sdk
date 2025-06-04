@@ -8,4 +8,5 @@ enum TvEpisodeType: string
 {
     case Standard = 'standard';
     case Finale = 'finale';
+    case Mid_Season = 'mid_season';
 }
