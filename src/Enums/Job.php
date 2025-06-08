@@ -726,6 +726,7 @@ enum Job: string
     case Special_Effects_Technician = 'Special Effects Technician';
     case Special_Guest_Director = 'Special Guest Director';
     case Special_Props = 'Special Props';
+    case Specialized_Driver = 'Specialized Driver';
     case Special_Sound_Effects = 'Special Sound Effects';
     case Sponsorship_Director = 'Sponsorship Director';
     case Staff_Writer = 'Staff Writer';
