@@ -502,6 +502,7 @@ enum Job: string
     case Music_Arranger = 'Music Arranger';
     case Music_Consultant = 'Music Consultant';
     case Music_Coordinator = 'Music Coordinator';
+    case Music_Co_Supervisor = 'Music Co-Supervisor';
     case Music_Director = 'Music Director';
     case Music_Editor = 'Music Editor';
     case Music_Producer = 'Music Producer';
