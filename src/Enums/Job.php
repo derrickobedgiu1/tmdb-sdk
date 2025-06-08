@@ -405,6 +405,7 @@ enum Job: string
     case Human_Resources = 'Human Resources';
     case IO_Supervisor = 'I/O Supervisor';
     case Idea = 'Idea';
+    case Junior_Story_Editor = 'Junior Story Editor';
     case Imaging_Science = 'Imaging Science';
     case In_Memory_Of = 'In Memory Of';
     case Information_Systems_Manager = 'Information Systems Manager';
