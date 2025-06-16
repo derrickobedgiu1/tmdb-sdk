@@ -137,6 +137,7 @@ enum Job: string
     case Associate_Editor = 'Associate Editor';
     case Associate_Producer = 'Associate Producer';
     case Atmos_Editor = 'Atmos Editor';
+    case Attorney = 'Attorney';
     case Audio_Post_Coordinator = 'Audio Post Coordinator';
     case Author = 'Author';
     case B_Camera_Operator = '"B" Camera Operator';
