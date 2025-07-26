@@ -516,6 +516,7 @@ enum Job: string
     case Musician = 'Musician';
     case Negative_Cutter = 'Negative Cutter';
     case Novel = 'Novel';
+    case On_Set_Computer_Graphics = 'On Set Computer Graphics';
     case On_Set_Dresser = 'On Set Dresser';
     case On_Set_Props = 'On Set Props';
     case Online_Editor = 'Online Editor';
